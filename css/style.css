@@ -34,7 +34,7 @@ h3 {
 }
 
 p {
-    width: 960px;
+    width: 70%;
     margin: 40px auto;
     color: #000;
     line-height: 200%;
@@ -198,10 +198,10 @@ code {
 .block-merging h2 {
     color: #666;
 }
-.block-tagging {
+.block-rebase {
     background-color: #f2f2f2;
 }
-.block-tagging h2 {
+.block-rebase h2 {
     color: #fff;
 }
 .block-hints {
@@ -228,11 +228,8 @@ code {
     font-size: 24px;
     color: #cc4037;
 }
-.block-tagging {
+.block-rebase {
     background-color: #348fd4;
-}
-.block-tagging h2 {
-    color: #06406c;
 }
 .block-hints {
     background-color: #06406c;
