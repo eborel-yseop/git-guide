@@ -106,13 +106,15 @@
             To update your local repository to the newest commit (corresponding to the branch you are currently on), execute <br />
             <code>git pull</code><br />
             in your working directory to <i>fetch</i> and <i>merge</i> remote changes.<br />
+        </p>
+        <p>
             To merge another branch into your active branch (e.g. <i>develop</i>), use<br />
             <code>git merge &lt;branch&gt;</code><br />
-            In both cases git tries to auto-merge changes. Unfortunately, this is not always possible and results in <i>conflicts</i>.
+            In both cases git tries to auto-merge changes. Unfortunately, this is not always possible and results in <i>conflicts</i>.<br />
             You are responsible to merge those <i>conflicts</i>
             manually by editing the files shown by git. After changing, you need to mark them as merged with<br />
             <code>git add &lt;filename&gt;</code><br />
-            before merging changes, you can also preview them by using<br />
+            Before merging changes, you can also preview them by using<br />
             <code>git diff &lt;source_branch&gt; &lt;target_branch&gt;</code><br />
             This also works for individual files<br />
             <code>git diff &lt;filename&gt;</code> 
@@ -137,7 +139,7 @@
     </div>
     <a name="rebase"></a>
     <div class="scrollblock block-rebase">
-        <h2>re-write history</h2>
+        <h2>rewrite history</h2>
         <p>
             When starting a branch (let say, from <i>develop</i>), a good practice is to keep your branch up to date with its source branch.<br />
             To do this, we use an operation called <i>rebase</i><br />
@@ -146,6 +148,11 @@
         <p>
             Here the <i>branch</i>, started from <i>develop</i>, was <i>rebased</i> on its last commit, with the following command<br />
             <code>git rebase origin/develop</code>
+        </p>
+        <p>
+            Sometimes, we do "dirty" commits (no naming convention/description), for testing purpose or just to save our works.<br />
+            Afterward, it's a good practice to clean up our history, by doing an <i>interactive rebase</i><br />
+            <code>git rebase -i HEAD~5</code>
         </p>
     </div>
     <!-- <a name="tagging"></a>
